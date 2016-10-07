@@ -1,5 +1,4 @@
-# Clean & Simple Code
-
+# Clean & Simple Code #
 **_image_**
 
 Note: 
@@ -9,6 +8,7 @@ Note:
 1. D&eacute;veloppeur am&eacute;ricain n&eacute; en 1952  
 1. Parmis les cr&eacute;ateurs du manifeste Agile
 1. SmallTalk & Java
+
 
 ## Overview
 
@@ -267,24 +267,6 @@ Note:
 * Last resort, handle at topmost level and shutdown app or abort web call 
 
 
-# Simple Design
-
-> *Make it work, make it right, make it fast.*
-― Kent Beck
-
-
-## 4 rules of Simple Design
-
-* Valide les tests
-* Exprime clairement son intention 
-* Contient aucune duplication
-* Minimise le nombre d'&eacute;l&eacute;ments
-
-Note:
-
-**ATTENTION**: Minimiser tant qu'on n'enfreint pas la seconde r&egrave;gle ! 
-
-
 
 # Classes
 
@@ -328,6 +310,7 @@ public void SaveUser(int id, string nom, string prénom, string adresse, string 
 public void SaveUser(User user);
 ``` 
 
+
 ## Principe de proximité
 
 Conserver les éléments liés à proximité
@@ -342,6 +325,7 @@ Le code collapsed se lit comme un résumé
 # Commentaires
 
 > redondance / évidence / péremption / inutile
+
 
 ## To comment or not to comment
 
@@ -369,6 +353,25 @@ Note:
 - Arrivez-vous à exprimer l'intention dans le code?
 - Est-ce que le commentaire est un déodorant ?
 - Sa place est dans le code source?
+
+
+
+# Simple Design
+
+> *Make it work, make it right, make it fast.*
+― Kent Beck
+
+
+## 4 rules of Simple Design
+
+* Valide les tests
+* Exprime clairement son intention 
+* Contient aucune duplication
+* Minimise le nombre d'&eacute;l&eacute;ments
+
+Note:
+
+**ATTENTION**: Minimiser tant qu'on n'enfreint pas la seconde r&egrave;gle ! 
 
 
 
@@ -408,6 +411,8 @@ Cela fonctionne quelque soit
 * Pair Programming / Mob Programming 
 * Code Reviews 
 * Outils de suivi de la qualité du code
+
+
 
 # Quotes
 
