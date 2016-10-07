@@ -5,9 +5,9 @@
 Note: 
 
 1. Kent Beck <-> Simple Design : essentiel des pratiques dev XP 
-1. Uncle Bob a popularisé la pratique du Clean Code au travers de ces deux livres Clean Code et Clean Coder. 
-1. Développeur américain né en 1952  
-1. Parmis les créateurs du manifeste Agile
+1. Uncle Bob a popularis&eacute; la pratique du Clean Code au travers de ces deux livres Clean Code et Clean Coder. 
+1. D&eacute;veloppeur am&eacute;ricain n&eacute; en 1952  
+1. Parmis les cr&eacute;ateurs du manifeste Agile
 1. SmallTalk & Java
 
 ## Overview
@@ -26,14 +26,14 @@ Note:
 
 ## Du code propre ?
 
-* Du code structuré, rangé, cohérent & expressif
-* Du code qui facilite la compréhension et l'utilisation
+* Du code structur&eacute;, rang&eacute;, coh&eacute;rent & expressif
+* Du code qui facilite la compr&eacute;hension et l'utilisation
 
 Note:
 
 * Exemple de la paillasse du cuisinier
 
-Ensemble de règles: 
+Ensemble de r&egrave;gles: 
 
 - de programmation (objet)
 - de nommage
@@ -42,10 +42,10 @@ Ensemble de règles:
 
 ## Pourquoi c'est important ?
 
-- Développeur: 80% lecture / 20% écriture 
-- La documentation est souvent incomplète, périmée, voir inexistente
-- Code est partagé par les équipes
-- En agile, il faut être préparer au changement
+- D&eacute;veloppeur: 80% lecture / 20% &eacute;criture 
+- La documentation est souvent incompl&egrave;te, p&eacute;rim&eacute;e, voir inexistente
+- Code est partag&eacute; par les &eacute;quipes
+- En agile, il faut être pr&eacute;parer au changement
 
 Note: 
 
@@ -54,8 +54,8 @@ Note:
 
 ## Ratio Signal / Bruit
 
-- l'Homme peut seulement conserver 7 éléments (+-2) dans sa mémoire court terme
-- Trop d'informations simultannées perdent le lecteur
+- l'Homme peut seulement conserver 7 &eacute;l&eacute;ments (+-2) dans sa m&eacute;moire court terme
+- Trop d'informations simultann&eacute;es perdent le lecteur
 - Le bruit s'amplifie doucement au fil du temps. => rester vigilant!
 
 
@@ -101,8 +101,8 @@ Note:
 ## Nommer une classe
 
 1. Un nom
-2. Aussi spécifique que possible 
-3. Responsabilité claire
+2. Aussi sp&eacute;cifique que possible 
+3. Responsabilit&eacute; claire
 4. Pas de suffixes superflus
 
 
@@ -119,17 +119,17 @@ Note:
 * ...
 
 
-## Nommer une méthode
+## Nommer une m&eacute;thode
 
 * Le nom doit suffire !
-* Pas de nom générique (Do, Process, Execute ) 
+* Pas de nom g&eacute;n&eacute;rique (Do, Process, Execute ) 
 
 => ex: DocumentConverter.HtmlFromText(textFile);
 
 
-## Appel à un ami !
+## Appel &agrave; un ami !
 
-Dans le doute, demandez à un collègue 
+Dans le doute, demandez &agrave; un coll&egrave;gue 
 
 
 
@@ -137,7 +137,7 @@ Dans le doute, demandez à un collègue
 
 > If I had more time I would have written a shorter letter. Blaise Pascal
 
-* Expressivité
+* Expressivit&eacute;
 * Concision
 
 
@@ -159,8 +159,8 @@ function doSomething(entity) {
 }
 ```
 
-* Préférez les formulations positives
-* Imprécision des ensembles flous
+* Pr&eacute;f&eacute;rez les formulations positives
+* Impr&eacute;cision des ensembles flous
 
 
 ## Magic Strings & Numbers
@@ -179,11 +179,11 @@ public void Initialize(Person person, int level, Date date)
 }
 ```
 
-* Facilité au changement
+* Facilit&eacute; au changement
 * Garanti de la compilation
 
 
-## Réduire la complexité 
+## R&eacute;duire la complexit&eacute; 
 
 ```python
 if date.before(SUMMER_START) and date.after(SUMMER_END):
@@ -194,19 +194,19 @@ else:
     charge = quantity * summerRate
 ```
 
-* Favoriser une méthode
-* Extraire méthode
+* Favoriser une m&eacute;thode
+* Extraire m&eacute;thode
 
 
-## Comportement vs Enumération
+## Comportement vs Enum&eacute;ration
 
 * Polymorphisme pour injecter du comportement 
-* plutôt que l'énumération de tous les comportements à un endroit
+* plutôt que l'&eacute;num&eacute;ration de tous les comportements &agrave; un endroit
 
 
 ## Dictionaires
 
-* Déplacer une liste de conditions dans une structure de données appropriée
+* D&eacute;placer une liste de conditions dans une structure de donn&eacute;es appropri&eacute;e
 
 
 ## Concision
@@ -222,27 +222,27 @@ else:
 ― Robert C. Martin @unclebob
 
 
-## Pourquoi créer une fonction?
+## Pourquoi cr&eacute;er une fonction?
 
 * Eviter la duplication
-* Réduire l'indentation du code
+* R&eacute;duire l'indentation du code
 * Clarifier l'intention d'un code 
-* Séparer différentes opérations
+* S&eacute;parer diff&eacute;rentes op&eacute;rations
 
 Note:
 
-* dup: Mutualiser pour réutiliser & éviter les disparités
-* ind: Réduire la complexité cyclomatique
-* int: Introduire des concepts de plus haut niveau, réduire le nombre d'éléments locaux.
-* sep: Diviser pour mieux règner - éviter les effets de vase communicants
+* dup: Mutualiser pour r&eacute;utiliser & &eacute;viter les disparit&eacute;s
+* ind: R&eacute;duire la complexit&eacute; cyclomatique
+* int: Introduire des concepts de plus haut niveau, r&eacute;duire le nombre d'&eacute;l&eacute;ments locaux.
+* sep: Diviser pour mieux r&egrave;gner - &eacute;viter les effets de vase communicants
 
 
-## Métriques
+## M&eacute;triques
 
 Uncle Bob, dit qu'une fonction ne devrait :
 - rarement faire plus de 20 lignes
 - quasi jamais plus de 100 lignes,
-- pas avoir plus de 3 paramètres. 
+- pas avoir plus de 3 param&egrave;tres. 
 
 
 
@@ -250,14 +250,14 @@ Uncle Bob, dit qu'une fonction ne devrait :
 
 3 types d'exceptions:
 * Fatale
-* Gérable
-* Négligeable
+* G&eacute;rable
+* N&eacute;gligeable
 
 Note:
 
-- fat: ressources obligatoires dysfonctionnant. Incapacité de l'app à se rattraper gracieusement.
+- fat: ressources obligatoires dysfonctionnant. Incapacit&eacute; de l'app &agrave; se rattraper gracieusement.
 - ger: une ou plusieurs solutions existent : rejeu, operation alternative
-- neg: pas d'incidence sur l'application. (code inélégant dans une api de plus bas niveau)
+- neg: pas d'incidence sur l'application. (code in&eacute;l&eacute;gant dans une api de plus bas niveau)
 
 
 ## Rien sous le tapis!
@@ -278,11 +278,11 @@ Note:
 * Valide les tests
 * Exprime clairement son intention 
 * Contient aucune duplication
-* Minimise le nombre d'éléments
+* Minimise le nombre d'&eacute;l&eacute;ments
 
 Note:
 
-**ATTENTION**: Minimiser tant qu'on n'enfreint pas la seconde règle ! 
+**ATTENTION**: Minimiser tant qu'on n'enfreint pas la seconde r&egrave;gle ! 
 
 
 
@@ -291,7 +291,86 @@ Note:
 
 ## <New Class>
 
-* 
+* Nouveau concept
+* Coh&eacute;sion faible
+* R&eacute;utilisation
+* R&eacute;duire la complexit&eacute;
+
+Note:
+
+**r&eacute;duire complexit&eacute;**: 
+- diminuer le nombre d'&eacute;l&eacute;ments (coh&eacute;sion) 
+- encapsuler des variables dans une structure coh&eacute;rente
+
+
+## Coh&eacute;sion & Couplage 
+
+* Coh&eacute;sion *forte*
+    - Regroupement fonctionnel
+    - Même niveau de détail
+
+* Couplage *faible*
+    - Minimiser dépendances 
+
+
+## Soyez protecteur 
+
+Exposez le minimum nécessaire
+
+
+## Primitive Obsession
+
+```cs
+// Only uses primitives ...
+public void SaveUser(int id, string nom, string prénom, string adresse, string téléphone);
+
+// When an object could easily sum it up !
+public void SaveUser(User user);
+``` 
+
+## Principe de proximité
+
+Conserver les éléments liés à proximité
+
+
+## Table des matières
+
+Le code collapsed se lit comme un résumé
+
+
+
+# Commentaires
+
+> redondance / évidence / péremption / inutile
+
+## To comment or not to comment
+
+* Résumé
+* Code désactivé
+* Avertissement
+* Clarification
+
+Note: 
+
+* Résumé
+    - Duplication  
+    - Approximation
+    - Vision erronée/périmée
+* Code désactivé
+    - Zombie code => Delete
+* Avertissement : Todo/Warning
+    - Dette technique
+* Clarification
+    - Signe de code trop long ?
+
+
+## Questions à se poser
+
+- Arrivez-vous à exprimer l'intention dans le code?
+- Est-ce que le commentaire est un déodorant ?
+- Sa place est dans le code source?
+
+
 
 # Conclusion
 
@@ -299,19 +378,20 @@ Note:
 ― Edsger W. Dijkstra
 
 
-## Clean Code ???
+## La v&eacute;rit&eacute; est dans le code
+
+* Le code est majoritairement lu
+* Le code est la seule documentation &agrave; jour
+* Le bruit est l'origine de mauvaises implémentations & bugs
+
+
+## Clean Code
 
 * Clair
+* Concis
 * Expressif
 * Flexible
 * Adaptable
-
-
-## La vérité est dans le code
-
-* Le code est majoritairement lu
-* Le code est la seule documentation à jour
-* Le bruit du code est à l'origine de bugs
 
 
 ## Un investissement durable 
@@ -321,6 +401,13 @@ Cela fonctionne quelque soit
 * l'architecture
 * les librairies
 
+
+## Des pratiques partagées !
+
+* Documenter des standards
+* Pair Programming / Mob Programming 
+* Code Reviews 
+* Outils de suivi de la qualité du code
 
 # Quotes
 
@@ -344,7 +431,7 @@ Cela fonctionne quelque soit
 
 > The best sentence? The shortest. Anatole France
 
-> Perfection is not when there is no more to add, but no more to take away. Antoine de Saint Exupéry
+> Perfection is not when there is no more to add, but no more to take away. Antoine de Saint Exup&eacute;ry
 
 > Conciseness is the sister of talent. Anton Chekhov
 
