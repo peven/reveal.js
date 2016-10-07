@@ -8,6 +8,8 @@
 
 ## Tests : Overview
 
+> *Optimism is an occupational hazard of programming: feedback is the treament.*
+― Kent Beck
 
 ### Le coût du bug
 
@@ -76,10 +78,15 @@ Note:
 
 ### Organiser ses tests 
 
-1. Arrange 
-2. Act 
-3. Assert 
+1. Arrange
+2. Act
+3. Assert
 
+ou 
+
+1. Given
+2. When
+3. Then
 
 ### What's in a name?
 
@@ -127,7 +134,7 @@ Note: Même quand il y a une volont&eacute; de faire des tests, ils peuvent deve
 - Timely 
 
 Note: 
-- Fast => Rapide (car ex&eacute;cuter souvent)
+- Fast => Rapide (car ex&eacute;cuter souvent. Les interruptions nuisent au flux naturel du travail)
 - Isolated => Ind&eacute;pendant (pour ex&eacute;cuter des sous ensembles, ou en parall&agrave;le, ind&eacute;pendemment de l'ordre)
 - Repeatable => Admettant d'être rejouer (Sans conserver d'&eacute;tat)
 - Self-Validating => Auto-Validant (pas de validation humaine)
@@ -168,13 +175,19 @@ Avant 3 occurences, on ne g&eacute;n&eacute;ralise pas un comportement !
 
 - Fake it
 - Use Obvious Implementation
-- Triangulation ???
+- Triangulation
 
 Note: 
 - Fake it (Doublure temporaire)
 - Use Obvious Implementation (Solution &eacute;vidente)
-- Triangulation 
+- **??? Triangulation  ???** 
 
+
+### Aller plus loin 
+
+- Outside-In vs Inside-Out TDD 
+- Transformation Priority Premise
+- DRY vs DAMP ?!
 
 ## 
 
