@@ -1,6 +1,3 @@
-
-
-
 # La boîte &agrave; outil du Craftsman
 
 ![Toolbox](/slides/img/Fotolia_93525027_S.jpg)
@@ -88,6 +85,7 @@ ou
 2. When
 3. Then
 
+
 ### What's in a name?
 
 <!-- .slide: data-background-image="/slides/img/letscode.jpg" data-background-size="contain" data-background-repeat="no-repeat" -->
@@ -144,10 +142,14 @@ https://github.com/ghsukumar/SFDC_Best_Practices/wiki/F.I.R.S.T-Principles-of-Un
 
 ### Test-Driven Development (TDD)
 
+> *If we continue to develop our technology without wisdom or prudence, our servant may prove to be our executioner.*
+― Omar N. Bradley
+
 
 ### Le test comme origine du code
 
 **TODO** <!-- .element: class="fragment highlight-red" data-fragment-index="0"--> 
+
 
 ### Le cycle du TDD
 
@@ -188,6 +190,7 @@ Note:
 - Outside-In vs Inside-Out TDD 
 - Transformation Priority Premise
 - DRY vs DAMP ?!
+
 
 ## 
 

@@ -375,6 +375,32 @@ Note:
 
 
 
+# SOLID Principles
+
+|     |         |                                 |
+|:---:|:-------:|---------------------------------|
+| *S* | **SRP** | Single responsibility principle |
+| *O* | **OCP** | Open/closed principle           |
+| *L* | **LSP** | Liskov substitution principle   |
+| *I* | **ISP** | Interface segregation principle |
+| *D* | **DIP** | Dependency inversion principle  |
+|     |         |                                 |
+
+Note:
+
+- SRP: a class should have only a single responsibility (i.e. only one potential change in the software's specification should be able to affect the specification of the class)
+- OCP: “software entities … should be open for extension, but closed for modification.”
+- LSP: “objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program.” See also design by contract.
+- ISP: “many client-specific interfaces are better than one general-purpose interface.”
+- DIP: one should “Depend upon Abstractions. Do not depend upon concretions.”
+
+
+## SRP : Single Responsability Principle
+
+
+## OCP : Open-Closed Principle
+
+
 # Conclusion
 
 > *Simplicity is a great virtue but it requires hard work to achieve it and education to appreciate it. And to make matters worse: complexity sells better.*
@@ -388,13 +414,12 @@ Note:
 * Le bruit est l'origine de mauvaises implémentations & bugs
 
 
-## Clean Code
+## Clean & Simple Code
 
 * Clair
 * Concis
 * Expressif
-* Flexible
-* Adaptable
+* Tester
 
 
 ## Un investissement durable 
@@ -413,14 +438,20 @@ Cela fonctionne quelque soit
 * Outils de suivi de la qualité du code
 
 
+## Références 
+
+- Clean Code, Robert C Martin
+- Code Complete 2, ???
+- Extreme Programming Explained, Kent Beck
+
+- Clean Code for Humans, Corey Hanes on Pluralsight
 
 # Quotes
 
 > *Good code is like a good joke. You should never have to explain it!*
 ― Venkat Subramaniam @venkat_s
 
-> *If we continue to develop our technology without wisdom or prudence, our servant may prove to be our executioner.*
-― Omar N. Bradley
+
 
 > *Truth can only be found in one place: the code.*
 ― Robert C. Martin @unclebob
