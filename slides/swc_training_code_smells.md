@@ -223,3 +223,14 @@ Note:
 -
 
 Note:
+
+
+
+## R&eacute;f&eacute;rences
+
+- Article
+    - [Code Smell](http://martinfowler.com/bliki/CodeSmell.html), Martin Fowler
+
+- Books
+    - Refactoring, Martin Fowler 
+    - Clean Code, Robert C Martin
