@@ -1,12 +1,12 @@
 # Initiation au Software Craftsmanship 
 
- _Un parcours_
-
 formateur: [Peter Even]("mailto:peter.even@viseo.com") /
 [@petervaneven]("http://twitter.com/petervaneven")
 
+\#softwareCraftsman \#d&eacute;veloppeur \#dotnet \#mentor \#viseo \#nCrafts  
 
-## Un chemin
+
+## Un parcours
 
 > It's a mindset where software developers choose to be responsible for their own careers, constantly learning new tools and techniques and constantly bettering themselves. 
 

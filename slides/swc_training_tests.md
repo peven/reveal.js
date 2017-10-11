@@ -1,18 +1,21 @@
-# La boîte &agrave; outil du Craftsman
+# La boite &agrave; outil du Craftsman
 
 ![Toolbox](/slides/img/Fotolia_93525027_S.jpg)
 
 
-## Tests : Overview
+## Tests 
 
-> *Optimism is an occupational hazard of programming: feedback is the treament.*
-― Kent Beck
+> Optimism is an occupational hazard of programming: feedback is the treament.
+ Kent Beck
 
-### Le coût du bug
+
+### Cout d'un bug au fil du temps
+
+![Cout des bugs](/slides/img/cost_of_bugs_over_time.jpg)
 
 Note: 
 
-Le coût d'un bug croît x² plus il est d&eacute;couvert tardivement
+Le cout d'un bug est d'autant plus grand qu'il est d&eacute;couvert tardivement
 - http://blog.celerity.com/the-true-cost-of-a-software-bug 
 - https://www.isixsigma.com/industries/software-it/defect-prevention-reducing-costs-and-enhancing-quality/
 - http://xbsoftware.com/blog/cost-bugs-software-testing/
@@ -21,12 +24,12 @@ Le coût d'un bug croît x² plus il est d&eacute;couvert tardivement
 
 ### Typologie
 
-1. Tests **unitaires** <!-- .element: class="fragment" data-fragment-index="1" --> 
-2. Tests d'**int&eacute;gration** <!-- .element: class="fragment" data-fragment-index="2" -->
-3. Tests **fonctionnels** <!-- .element: class="fragment" data-fragment-index="3" -->
-4. Tests de **non-r&eacute;gression** <!-- .element: class="fragment" data-fragment-index="4" -->
-5. Tests d'**acceptance** <!-- .element: class="fragment" data-fragment-index="5" -->
-6. Tests de **performance** <!-- .element: class="fragment" data-fragment-index="6" -->
+1. Tests unitaires <!-- .element: class="fragment" data-fragment-index="1" --> 
+2. Tests d'int&eacute;gration <!-- .element: class="fragment" data-fragment-index="2" -->
+3. Tests fonctionnels <!-- .element: class="fragment" data-fragment-index="3" -->
+4. Tests de non-r&eacute;gression <!-- .element: class="fragment" data-fragment-index="4" -->
+5. Tests d'acceptance <!-- .element: class="fragment" data-fragment-index="5" -->
+6. Tests de performance <!-- .element: class="fragment" data-fragment-index="6" -->
 
 Note: 
 
@@ -37,24 +40,20 @@ Note:
 - acceptance: syst&agrave;me r&eacute;pond aux attentes des utilisateurs finaux
 - performance: &eacute;l&eacute;ment, ou syst&agrave;me entier, r&eacute;pond aux contraintes de performances d&eacute;finies  
 
+
 ### Propri&eacute;t&eacute;s d'un test unitaire
 
-S&eacute;quence de code _**ex&eacute;cutable**_ et **automatisable** mesurant de mani&agrave;re **reproductible** le r&eacute;sultat d'un code **atomique** et **isol&eacute;**
+S&eacute;quence de code _**ex&eacute;cutable**_ et **automatisable** mesurant de mani&egrave;re **reproductible** le r&eacute;sultat d'un code **atomique** et **isol&eacute;**
 
 
-### Effets d'un test unitaire
+### B&eacute;n&eacute;fices attendus
 
 - D&eacute;tection rapide d'erreurs
 - Maintenance s&eacute;curis&eacute;e
-- Documentation technique
-- Documentation fonctionnelle
+- Documentation technique & fonctionnelle
 
 
 ### Nommer son test
-
-- Classe de test => Contexte  
-- M&eacute;thode => Comportement attendu
-- Ne pas utiliser le mot *TEST* <!-- .element: class="fragment highlight-red" data-fragment-index="1"--> 
 
 ```csharp
 public class WhenUserEditsEntry
@@ -66,48 +65,41 @@ public class WhenUserEditsEntry
 	}
 }
 ``` 
-<!-- .element: class="fragment" data-fragment-index="2"--> 
+<!-- .element: class="fragment" data-fragment-index="1"--> 
 
 Note: 
-- classe de test repr&eacute;sente l'&eacute;l&eacute;ment ou comportement à tester
-- m&eacute;thode correspond au comportement attendu
+- Classe de test => &eacute;l&eacute;ment ou comportement à tester  
+- M&eacute;thode => Comportement attendu
+- Ne pas utiliser le mot *TEST* <!-- .element: class="fragment highlight-red" data-fragment-index="1"--> 
 
 
 ### Organiser ses tests 
 
-1. Arrange
-2. Act
-3. Assert
-
-ou 
-
-1. Given
-2. When
-3. Then
-
-
-### What's in a name?
-
-<!-- .slide: data-background-image="/slides/img/letscode.jpg" data-background-size="contain" data-background-repeat="no-repeat" -->
+|  |             |           |
+|--|-------------|-----------|
+|1.|   Arrange   |   Given   |
+|2.|   Act       |   When    |
+|3.|   Assert    |   Then    |
 
 
 ### Dummy, Stub, Fakes & Mock
 
-- Dummy: Objet par d&eacute;faut.
-- Fake: Impl&eacute;mentation limit&eacute;e
-- Stub: R&eacute;ponses pr&eacute;d&eacute;dfinies à l'appel de ses m&eacute;thodes
-- Mock: Trace le comportement 
+- Dummy: Objet par d&eacute;faut. 	<!-- .element: class="fragment highlight-current-blue" data-fragment-index="1" -->
+- Fake: Impl&eacute;mentation limit&eacute;e 	<!-- .element: class="fragment highlight-current-blue" data-fragment-index="2"--> 
+- Stub: R&eacute;ponses pr&eacute;d&eacute;dfinies &agrave; l'appel de ses m&eacute;thodes 	<!-- .element: class="fragment highlight-current-blue" data-fragment-index="3"--> 
+- Mock: Trace le comportement  	<!-- .element: class="fragment highlight-current-blue" data-fragment-index="4"--> 
 
 Note: 
 - Fake: Version appauvrie d'un objet permettant d'ex&eacute;cuter le test (sans framework)
-- Stub: Renvoyer la même valeur à chaque appel pour &eacute;liminer un aspect al&eacute;atoire, ou un acc&agrave;s base de donn&eacute;es
+- Stub: Renvoyer la m&ecirc;me valeur à chaque appel pour &eacute;liminer un aspect al&eacute;atoire, ou un acc&agrave;s base de donn&eacute;es
 - Mock: D&eacute;tecter un &eacute;v&eacute;nement ou un changement d'&eacute;tat au sein d'un objet 
 
 
 ### Confusion
 
 Test Double == Mock ? 
-(=Stub/Mock/Fake) 
+
+**Same Same...**  <!-- .element: class="fragment" data-fragment-index="1" -->
 
 Note: Il y a confusion sur les objets doublures de test, on les appelle tous Mock... 
 Les frameworks participent à cette confusion, car ils m&eacute;langent Stub & Mock al&eacute;grement.
@@ -116,9 +108,12 @@ Les frameworks participent à cette confusion, car ils m&eacute;langent Stub & M
 ### Soignez vos tests!
 
 Le **code de test** est aussi important que le **code de production** 
-Il doit être _aussi propre_ que le code qu'il valide!
 
-Note: Même quand il y a une volont&eacute; de faire des tests, ils peuvent devenir:
+Il doit &ecirc;tre _aussi propre_ que le code qu'il valide!
+
+Note: 
+
+Meme quand il y a une volont&eacute; de faire des tests, ils peuvent devenir:
 - Obsoletes, (&eacute;tat changeant -> tester le comportement et non l'&eacute;tat ?)
 - Inmaintenables. (les r&agrave;gles de code propre s'appliquent &eacute;galement au code de test)
 
@@ -132,45 +127,51 @@ Note: Même quand il y a une volont&eacute; de faire des tests, ils peuvent deve
 - Timely 
 
 Note: 
+
 - Fast => Rapide (car ex&eacute;cuter souvent. Les interruptions nuisent au flux naturel du travail)
 - Isolated => Ind&eacute;pendant (pour ex&eacute;cuter des sous ensembles, ou en parall&agrave;le, ind&eacute;pendemment de l'ordre)
-- Repeatable => Admettant d'être rejouer (Sans conserver d'&eacute;tat)
+- Repeatable => Admettant d'&ecirc;tre rejouer (Sans conserver d'&eacute;tat)
 - Self-Validating => Auto-Validant (pas de validation humaine)
 - Timely => &eacute;crit avec le code, voir avant (TDD) (En g&eacute;n&eacute;ral, les tests sont meilleurs quand ils sont proche de la conception ou à l'origine du code applicatif). 
 https://github.com/ghsukumar/SFDC_Best_Practices/wiki/F.I.R.S.T-Principles-of-Unit-Testing
 
 
-### Test-Driven Development (TDD)
 
-> *If we continue to develop our technology without wisdom or prudence, our servant may prove to be our executioner.*
-― Omar N. Bradley
+## Test-Driven Development (TDD)
+
+> If we continue to develop our technology without wisdom or prudence, our servant may prove to be our executioner.
+ Omar N. Bradley
+
+Note:
+
+Pratique de d&eacute;veloppement pilot&eacute; par les tests popularis&eacute; par Kent Beck et l'XP visant &agrave; am&eacute;liorer la couverture et la qualit&eacute; du code.
+Les praticiens lui reconnaissent m&ecirc;me des vertues de design &eacute;mergent ! 
+Alors que ses d&eacute;tracteurs trouvent que l'id&eacute;e est int&eacute;ressante mais la technique fait perdre beaucoup de temps.  
 
 
-### Le test comme origine du code
+### Forces du TDD 
 
-**TODO** <!-- .element: class="fragment highlight-red" data-fragment-index="0"--> 
+- 100% de couverture
+- Orient&eacute; conception
+
+Note:
+- Le code est test&eacute; avant meme d'etre &eacute;crit
+- Il faut imaginer l'utilisation des éléments avant leur implémentation comme une api
+- On passe beaucoup de temps &agrave; se poser des questions et refactorer. 
 
 
-### Le cycle du TDD
+### 
 
-1. Red
-2. Green
-3. Refactor
+<!-- .slide: data-background-image="/slides/img/redgreenrefacor.png" data-background-size="contain" data-background-repeat="no-repeat" -->
 
 
 ### Baby Steps
 
-On favorise toujours les tests et impl&eacute;mentations les plus simples possibles.
+Tests et impl&eacute;mentations les plus simples possibles !
 
-
-### Eloge de la simplicit&eacute;
-
-**TODO** <!-- .element: class="fragment highlight-red" data-fragment-index="0"-->
-
-
-### R&agrave;gle des 3
-
-Avant 3 occurences, on ne g&eacute;n&eacute;ralise pas un comportement !
+Note:
+- Rigueur difficile a tenir pour les developpeurs aguerris 
+- Cela fait reellement emerger les algorithmes les plus simples
 
 
 ### Strat&eacute;gies
@@ -180,16 +181,18 @@ Avant 3 occurences, on ne g&eacute;n&eacute;ralise pas un comportement !
 - Triangulation
 
 Note: 
-- Fake it (Doublure temporaire)
+- Fake it (Doublure temporaire, le temps de faire passer le test)
 - Use Obvious Implementation (Solution &eacute;vidente)
-- **??? Triangulation  ???** 
+- Triangulation (généralisation à la 3eme occurence)
+	Avant 3 occurences, on ne g&eacute;n&eacute;ralise pas un comportement !
 
 
 ### Aller plus loin 
 
+- Double Loop TDD
+- Mockist vs Classicist
 - Outside-In vs Inside-Out TDD 
 - Transformation Priority Premise
-- DRY vs DAMP ?!
 
 
 ## 
@@ -201,4 +204,5 @@ Note:
 
 - The Art of Unit Testing, Roy Osherove
 - TDD by Example, Kent Beck
-- Growing Object-Oriented Software Guided by Tests, Steve Freeman & Nat Pryce 
+- Growing Object-Oriented Software Guided by Tests, Steve Freeman & Nat Pryce
+ 

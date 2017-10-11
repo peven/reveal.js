@@ -1,6 +1,7 @@
-# Refactoring
+# 
 
-![Refactoring](/slides/img/keep_calm_and_refactor.png)
+<!-- .slide: data-background-image="/slides/img/keep_calm_and_refactor.png" data-background-size="contain" data-background-repeat="no-repeat" -->
+
 
 
 ## D&eacute;finition
@@ -8,50 +9,52 @@
 > Refactoring is the process of changing a software system in such a way that it does not alter the external behavior of the code yet improves its internal structure. 
 Martin Fowler
 
-Implications:
-- Le refactoring ne comprend aucune modification du système (global)
+
+## Implications
+
+- Le refactoring ne comprend aucune modification du syst&egrave;me (global)
 - Le refactoring n'est pas une r&eacute;ecriture 
-- Un refactoring améliore le code dans un but précis.
+- Un refactoring am&eacute;liore le code dans un but pr&eacute;cis.
 
 Note:
 
-- L'art d'améliorer sans risque la structure de code existant.
-- Touche pas aux fonctionnalités existantes => éviter les régressions
-- Part du code existant => La vérité est dans le code ! 
-- Le refactoring a vocation a préparé le code pour accueillir de nouvelles fonctionnalités plus facilement, ou bien, atteindre un niveau de qualité manquant.  
+- L'art d'am&eacute;liorer sans risque la structure de code existant.
+- Touche pas aux fonctionnalit&eacute;s existantes => &eacute;viter les r&eacute;gressions
+- Part du code existant => La v&eacute;rit&eacute; est dans le code ! 
+- Le refactoring a vocation a pr&eacute;par&eacute; le code pour accueillir de nouvelles fonctionnalit&eacute;s plus facilement, ou bien, atteindre un niveau de qualit&eacute; manquant.  
 
 
 ## Enjeu
 
-Le code existant: 
-- n'est jamais parfait, 
-- ni complétement adapté pour les nouvelles demandes 
-
-Le refactoring doit nous permettre de remettre notre code dans un état satisfaisant pour affronter sereinement les nouvelles demandes d'évolution.   
+Le refactoring nous permet de mettre le code dans un &eacute;tat satisfaisant pour affronter sereinement les demandes d'&eacute;volution
 
 Note: 
 
-- Car la perfection n'est pas de ce monde, 
+- Car la perfection n'est pas de ce monde, 	
 - et les contraintes externes peuvent avoir raison des meilleures intentions.
-- Car le futur ne peut être anticiper  
+- Car le futur ne peut &ecirc;tre anticiper  
 
 
 ## Quand doit-on refactorer ?
 
-Le poids du code existant nous empêche d'avancer dans de bonnes conditions! 
+Le poids du code existant nous emp&ecirc;che d'avancer dans de bonnes conditions! 
 
-Le code est difficile à modifier
+
+### Code est difficile &agrave; modifier
+
 - Personne ne le comprend
-- Les impacts d’une modification ricochent à travers l’application 
+- Les impacts d’une modification ricochent &agrave; travers l’application 
 
-La qualité est difficile à garantir
-- Code difficilement testable
-- Détection de Code Smells
- 
 Note:
 
-- Lorsque vous vous dites : "Je ferai mieux de créer un nouveau module à côté du code existant." 
-- Améliorer un code qui n'a pas besoin de changer => Perte de temps 
+- Lorsque vous vous dites : "Je ferai mieux de cr&eacute;er un nouveau module &agrave; côt&eacute; du code existant." 
+- Am&eacute;liorer un code qui n'a pas besoin de changer => Perte de temps 
+
+
+### Qualit&eacute; est difficile &agrave; garantir
+- Code difficilement testable
+- D&eacute;tection de Code Smells
+
 
 
 ## Minimiser
@@ -59,115 +62,101 @@ Note:
 > Premature optimization is the root of all evil.
 Donald Knuth
 
-- La solution la plus simple répondant au besoin connu aujourd’hui
-- Cultivez la capacité de réagir au changement, sans l'anticiper
+- La solution la plus simple r&eacute;pondant au besoin connu aujourd’hui
+- Cultivez la capacit&eacute; de r&eacute;agir au changement, sans l'anticiper
 
 Note:
 
-Rendez vous service: minimiser la comeplexité! Vos refactorings n'en seront que plus faciles. 
+Rendez vous service: minimiser la comeplexit&eacute;! Vos refactorings n'en seront que plus faciles. 
 
-1. Une solution simple... pouvant être améliorer (refactorer) par la suite !
-1. Méfiez vous de early optimisation
+1. Une solution simple... pouvant &ecirc;tre am&eacute;liorer (refactorer) par la suite !
+1. M&eacute;fiez vous de early optimisation
 
 
 ## TDD
 
-![Red Green REFACTOR](/slides/img/redgreenrefactor.jpg)
+![Red Green REFACTOR](/slides/img/Red_Green_Refactor_text.JPG)
 
 Note:
 
-- Refactoring = étape récurrente dans le TDD !
-- Le code marche enfin, on a une vision clair du problème, on refactor vers une solution plus simple & pereine
+- Refactoring = &eacute;tape r&eacute;currente dans le TDD !
+- Le code marche enfin, on a une vision clair du probl&egrave;me, on refactor vers une solution plus simple & pereine
 
 
 ## Code Legacy
 
-Quelques définitions:
+Quelques d&eacute;finitions:
 1. Code sans tests unitaires (Michael Feathers) 
-1. Code dès qu'il est écrit.
+1. Code d&egrave;s qu'il est &eacute;crit.
 1. Du code en production
-1. Code dont les créateurs ne font pas parti de l'équipe.
+1. Code dont les cr&eacute;ateurs ne font pas parti de l'&eacute;quipe.
 
 
 ## Refactoring du Code Legacy
 
 1. Identifier les points de changement
-1. Identifier les points de test associés
-1. Casser les dépendances
+1. Identifier les points de test associ&eacute;s
+1. Casser les d&eacute;pendances
 1. Mise en place du harnais de tests
 1. On applique des transformations et le refactoring
 1. On valide nos modifications
 
 
-## 1 Identifier les points de changement
+## 1) Identifier les points de changement
 
-Evolution du design
+- Code Smell
+- Evolution du design
 
-Code Smell
 
-
-## Faire évoluer son design 
+## Faire &eacute;voluer son design 
 
 - Choix technique 
-- Changement imprévu 
-- Nouvelle stratégie
+- Changement impr&eacute;vu 
+- Nouvelle strat&eacute;gie
 
 Note: 
 
 - Nouvel ORM, ajout du Cache, …
-- Modification d’une réglementation
-- Expansion à l'International -> multi-langue, règlementations locales
+- Modification d’une r&eacute;glementation
+- Expansion &agrave; l'International -> multi-langue, r&egrave;glementations locales
 
 
-## Code Smell
+## 2) Identifier les points &agrave; tester
 
-Bloaters - Long Method & Primitive Obsession
-OO Abusers - Switch Statements
-Change Preventers - Divergent Change & Shotgun Surgery
-Dispensables - Comments & Duplicate Code
-Couplers - Feature Envy & Inappropriate Intimacy
-Test Smells
-
-
-## 2 Identifier les points à tester
-
-Tests unitaires, fonctionnels ?
-
-Couverture ? La plus grande possible… mais ce n'est pas une garantie !
+- En tests unitaires, fonctionnels ?
+- Quelle couverture ?
 
 
 ## Tests = Feedback
 
-Qu’est ce que je veux savoir pour garantir la solidité de mon code ?
+Qu’est ce que je veux savoir pour garantir la solidit&eacute; de mon code ?
 
 
-## 3. Casser Les Dépendances
+## 3) Casser Les D&eacute;pendances
 
-Pour ramener le système sous test.
-Plus gros frein aux tests !
-Identifier les “Seams”, frontières entre les éléments du code
+- Identifier les “Seams”, fronti&egrave;res entre les &eacute;l&eacute;ments du code
 
-=> Crucial pour rendre les systèmes testables!
+=> Crucial pour rendre les syst&egrave;mes testables!
 
 
-## Créer des doubles de test
+## Cr&eacute;er des doubles
 
-Sale - Display 		
+Sale -> Display 		
 
-Sale - Interface - Display
-					`- Fake Display
+Sale -> Interface <- Display
+				  <- Fake Display
 
 
-## 4. Ecrire les tests
+## 4) Ecrire les tests
 
 Retour au TDD : 
 
-** RED ** - GREEN - REFACTOR
+ RED - GREEN - REFACTOR
 
 
-## 5. Transformations & Refactoring
+## 5) Transformations 
 
-Transformations: 
+[Transformations](http://refactoring.com/catalog/): 
 - Extract Method
 - Extract Class
 - Extract Interface
@@ -175,22 +164,25 @@ Transformations:
 - Remove Middle Man
 - Replace Conditional with Polymorphism
 - Replace Constructor with Factory Method
-- Change Value to Referencce
+- Change Value to Reference
 
 
 ## N'oubliez pas les tests !
 
-Refactoring des tests si nécessaire.
+Refactoring des tests si n&eacute;cessaire.
 
-Test Code is just as important as Production Code 
+> Test Code is just as important as Production Code 
 
 
 ## Pas d'ajout durant le refactoring !
 
-On ajoute pas de nouvelles fonctionnalités durant le refactoring ! 
-- Source de régression
+Pas de nouvelles fonctionnalit&eacute;s durant un refactoring ! 
+
+Note:
+
+- Source de r&eacute;gression
 - Pas couvert par les tests existant
-- trop de modifications simultanées obscurcissent la source d'éventuelles régressions
+- Trop de modifications simultan&eacute;es obscurcissent la source d'&eacute;ventuelles r&eacute;gressions
 
 
 ## Rappel: Baby Steps
@@ -199,8 +191,17 @@ On ajoute pas de nouvelles fonctionnalités durant le refactoring !
 ## Rappel : Use Tests
 
 
-## D&eacute;fintion wikipedia
+## R&eacute;f&eacute;rences
 
-Le réusinage de code consiste à retravailler le code source d'un code informatique sans ajouter de fonctionnalité au logiciel ni corriger de bogues, mais en améliorant sa lisibilité pour simplifier sa maintenance, ou le rendre plus générique; on parle aussi de remaniement. …
+ Refactorings : 
 
-En bref: Une réorganisation du code conservant les fonctionnalités inchangées, mais améliorant la maintenabilité et l’évolution.
+- Catalogue
+	- [Martin Fowler's Catalog](http://refactoring.com/catalog)
+	- [Sourcemaking](https://sourcemaking.com/refactoring/)
+
+- Livres
+    - Refactoring, improving the design of existing code, Martin Fowler 
+    - Working with Legacy Code, Michael Feathers
+
+- Pluralsight
+    [Refactoring Code](https://app.pluralsight.com/library/courses/refactoring-fundamentals/table-of-contents), Steve Smith
